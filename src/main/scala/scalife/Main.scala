@@ -4,11 +4,11 @@ import processing.core.PApplet
 
 object Main {
   def main(args: Array[String]): Unit = {
-    PApplet.main("scalife.Maina")
+    PApplet.main("scalife.Main")
   }
 }
 
-class Maina extends PApplet:
+class Main extends PApplet:
   override def settings(): Unit = {
     size(700, 700)
   }
