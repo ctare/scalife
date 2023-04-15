@@ -23,7 +23,7 @@ class Main extends PApplet {
     graph: DBGraph[BaseNode, BaseEdge] = new DBGraph[BaseNode, BaseEdge](),
   ) extends Database
 
-  val database = DatabaseEntity()
+  val database: DatabaseEntity = DatabaseEntity()
   // seed
   database.graph.addRootNode(new CentralNode(350, 350))
 
@@ -40,7 +40,7 @@ class Main extends PApplet {
     surface.setIcon(loadImage("logo.png"))
     surface.setTitle("Scalife")
 
-    game.camera.execute
+    game.camera.execute()
 
     game.keyManager.register('j') { () => game.camera.zoomOut(2) }
     game.keyManager.register('k') { () => game.camera.zoomIn(2) }
@@ -55,7 +55,7 @@ class Main extends PApplet {
   }
 
   override def draw(): Unit = {
-    game.camera.execute
+    game.camera.execute()
     smooth()
 
     background(0)

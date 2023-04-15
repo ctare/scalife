@@ -24,7 +24,7 @@ class Camera(val width: Int, val height: Int) {
     displayVec.y += y / displayScale
   }
 
-  def execute: Unit = {
+  def execute(): Unit = {
     Main.canvas.scale(displayScale)
     Main.canvas.translate(displayVec.x, displayVec.y)
   }
