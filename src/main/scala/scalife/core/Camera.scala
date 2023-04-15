@@ -1,6 +1,7 @@
 package scalife.core
 
 import processing.core.{PApplet, PVector}
+import scalife.Main
 
 class Camera(val width: Int, val height: Int) {
   private var displayScale = 1.0f
@@ -23,9 +24,9 @@ class Camera(val width: Int, val height: Int) {
     displayVec.y += y / displayScale
   }
 
-  def execute(app: PApplet): Unit = {
-    app.scale(displayScale)
-    app.translate(displayVec.x, displayVec.y)
+  def execute: Unit = {
+    Main.canvas.scale(displayScale)
+    Main.canvas.translate(displayVec.x, displayVec.y)
   }
 
   def position(mouseX: Int, mouseY: Int): PVector = {
